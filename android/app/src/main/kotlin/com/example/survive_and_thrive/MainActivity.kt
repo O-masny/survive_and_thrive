@@ -1,4 +1,4 @@
-package com.example.survive_and_thrive
+package com.iask.app
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "904334161619",
+    "project_id": "quiz201",
+    "storage_bucket": "quiz201.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904334161619:android:efd133e00c9903a4acc626",
+        "android_client_info": {
+          "package_name": "com.iask.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdHqD53MsjOHcTXg-T_hGK-Kj_CH6mIS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
