@@ -1,61 +1,35 @@
 import 'package:flutter/material.dart';
-import 'package:survive_and_thrive/game/game_bloc.dart';
-import '../models/question.dart';
 
-class QuizScreen extends StatefulWidget {
-  final String categoryId;
+class QuizScreen extends StatelessWidget {
+  final int level;
 
-  const QuizScreen({super.key, required this.categoryId});
-
-  @override
-  State<QuizScreen> createState() => _QuizScreenState();
-}
-
-class _QuizScreenState extends State<QuizScreen> {
-  final _gameBloc = GameBloc();
-
-  @override
-  void initState() {
-    super.initState();
-    _gameBloc.loadQuestions(widget.categoryId);
-  }
-
-  @override
-  void dispose() {
-    _gameBloc.dispose();
-    super.dispose();
-  }
+  QuizScreen({required this.level});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Quiz')),
-      body: StreamBuilder<List<Question>>(
-        stream: _gameBloc.questionsStream,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          if (snapshot.hasError) {
-            return Center(child: Text(snapshot.error.toString()));
-          }
-          final questions = snapshot.data!;
-          return ListView.builder(
-            itemCount: questions.length,
-            itemBuilder: (context, index) {
-              final question = questions[index];
-              return ListTile(
-                title: Text(question.text),
-                subtitle: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: question.options
-                      .map((option) => Text('- $option'))
-                      .toList(),
-                ),
-              );
-            },
-          );
-        },
+      appBar: AppBar(title: Text('Level $level')),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Question for Level $level',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 20),
+            Column(
+              children: [
+                ElevatedButton(onPressed: () {}, child: Text('A) Answer 1')),
+                ElevatedButton(onPressed: () {}, child: Text('B) Answer 2')),
+                ElevatedButton(onPressed: () {}, child: Text('C) Answer 3')),
+                ElevatedButton(onPressed: () {}, child: Text('D) Answer 4')),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
