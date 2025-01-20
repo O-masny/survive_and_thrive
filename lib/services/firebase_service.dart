@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:survive_and_thrive/models/player/player.dart';
 
 class FirebaseService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -13,6 +14,16 @@ class FirebaseService {
       'player2Score': 0,
       'gameStatus': 'waiting', // nebo 'inProgress'
     });
+  }
+
+  Stream<List<Player>> getLeaderboardStream() {
+    return _firestore
+        .collection('leaderboard') // Název kolekce v Firestore
+        .orderBy('score', descending: true) // Řazení podle skóre
+        .snapshots()
+        .map((snapshot) => snapshot.docs.map((doc) {
+              return Player.fromJson(doc.data() as Map<String, dynamic>);
+            }).toList());
   }
 
   // Připojení hráče k místnosti
