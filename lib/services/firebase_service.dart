@@ -16,6 +16,13 @@ class FirebaseService {
     });
   }
 
+  Future<void> updateQuestion(String roomId, int questionIndex) async {
+    await FirebaseFirestore.instance
+        .collection('rooms')
+        .doc(roomId)
+        .update({'currentQuestion': questionIndex});
+  }
+
   Stream<List<Player>> getLeaderboardStream() {
     return _firestore
         .collection('leaderboard') // Název kolekce v Firestore
