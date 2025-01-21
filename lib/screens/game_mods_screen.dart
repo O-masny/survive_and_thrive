@@ -37,8 +37,7 @@ class GameModesScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => GameWidget(
-                        game: QuizGame(
-                            gameBloc: gameBloc), // Předáváme blok do hry
+                        game: QuizGame(), // Předáváme blok do hry
                       ),
                     ),
                   );
