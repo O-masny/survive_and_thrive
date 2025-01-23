@@ -49,8 +49,7 @@ class GameModesScreen extends StatelessWidget {
                                         MaterialPageRoute(
                                             builder: (context) =>
                                                 GameOverWidget(
-                                                  winnerText: '',
-                                                  onContinue: () {},
+                                             
                                                 )),
                                       ); // Předáváme blok do hry
                                     }))));
