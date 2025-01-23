@@ -83,11 +83,26 @@ class GameBloc extends Bloc<GameEvent, GameState> {
 
     // Handler pro přechod na další otázku
     on<_NextQuestion>((event, emit) async {
-      final nextQuestion = state.currentQuestion + 1;
-      await _firebaseService.updateQuestion(state.roomId, nextQuestion);
-      emit(state.copyWith(currentQuestion: nextQuestion));
+      if (state.currentQuestion < state.questions.length - 1) {
+        final nextQuestion = state.currentQuestion + 1;
+        emit(state.copyWith(currentQuestion: nextQuestion));
+      } else {
+        emit(
+          state.copyWith(gameStatus: GameStatus.gameOver),
+        ); // End the game if all questions are answered
+      }
     });
-
+    on<_AnswerEvent>((event, emit) async {
+      int newScore = event.isCorrect
+          ? (event.playerIndex == 1
+              ? state.player1Score + 1
+              : state.player2Score + 1)
+          : state.player1Score;
+      emit(state.copyWith(
+        player1Score: newScore,
+        player2Score: state.player2Score,
+      ));
+    });
     // Handler pro ukončení hry
     on<_EndGame>((event, emit) async {
       emit(state.copyWith(gameStatus: GameStatus.gameOver));

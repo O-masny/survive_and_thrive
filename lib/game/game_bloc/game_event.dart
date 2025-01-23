@@ -22,6 +22,11 @@ class GameEvent with _$GameEvent {
     required int score,
   }) = _UpdateScore;
 
+  const factory GameEvent.answerEvent({
+    required int playerIndex,
+    required bool isCorrect,
+  }) = _AnswerEvent;
+
   const factory GameEvent.loadRoom({required String roomId}) = _LoadRoom;
 
   const factory GameEvent.timerUpdated({required int remainingTime}) =

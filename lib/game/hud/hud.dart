@@ -17,8 +17,8 @@ class HUD extends PositionComponent {
     // Vykreslení skóre
     TextPaint textPaint =
         TextPaint(style: TextStyle(color: Colors.white, fontSize: 24));
-    textPaint.render(canvas, "P1: ${score.player1.score}", Vector2(10, 10));
-    textPaint.render(canvas, "P2: ${score.player2.score}", Vector2(10, 40));
+    textPaint.render(canvas, "P1: ${score.player1.name}", Vector2(10, 10));
+    textPaint.render(canvas, "P2: ${score.player2.name}", Vector2(10, 40));
 
     // Vykreslení času
     textPaint.render(canvas, "Time: ${timer}s", Vector2(10, 70));

@@ -25,6 +25,7 @@ mixin _$GameEvent {
     required TResult Function(String roomId, String playerName) joinRoom,
     required TResult Function(String roomId, String player, int score)
         updateScore,
+    required TResult Function(int playerIndex, bool isCorrect) answerEvent,
     required TResult Function(String roomId) loadRoom,
     required TResult Function(int remainingTime) timerUpdated,
     required TResult Function() nextQuestion,
@@ -39,6 +40,7 @@ mixin _$GameEvent {
     TResult? Function()? start1v1,
     TResult? Function(String roomId, String playerName)? joinRoom,
     TResult? Function(String roomId, String player, int score)? updateScore,
+    TResult? Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult? Function(String roomId)? loadRoom,
     TResult? Function(int remainingTime)? timerUpdated,
     TResult? Function()? nextQuestion,
@@ -53,6 +55,7 @@ mixin _$GameEvent {
     TResult Function()? start1v1,
     TResult Function(String roomId, String playerName)? joinRoom,
     TResult Function(String roomId, String player, int score)? updateScore,
+    TResult Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult Function(String roomId)? loadRoom,
     TResult Function(int remainingTime)? timerUpdated,
     TResult Function()? nextQuestion,
@@ -68,6 +71,7 @@ mixin _$GameEvent {
     required TResult Function(_Start1v1 value) start1v1,
     required TResult Function(_JoinRoom value) joinRoom,
     required TResult Function(_UpdateScore value) updateScore,
+    required TResult Function(_AnswerEvent value) answerEvent,
     required TResult Function(_LoadRoom value) loadRoom,
     required TResult Function(_TimerUpdated value) timerUpdated,
     required TResult Function(_NextQuestion value) nextQuestion,
@@ -82,6 +86,7 @@ mixin _$GameEvent {
     TResult? Function(_Start1v1 value)? start1v1,
     TResult? Function(_JoinRoom value)? joinRoom,
     TResult? Function(_UpdateScore value)? updateScore,
+    TResult? Function(_AnswerEvent value)? answerEvent,
     TResult? Function(_LoadRoom value)? loadRoom,
     TResult? Function(_TimerUpdated value)? timerUpdated,
     TResult? Function(_NextQuestion value)? nextQuestion,
@@ -96,6 +101,7 @@ mixin _$GameEvent {
     TResult Function(_Start1v1 value)? start1v1,
     TResult Function(_JoinRoom value)? joinRoom,
     TResult Function(_UpdateScore value)? updateScore,
+    TResult Function(_AnswerEvent value)? answerEvent,
     TResult Function(_LoadRoom value)? loadRoom,
     TResult Function(_TimerUpdated value)? timerUpdated,
     TResult Function(_NextQuestion value)? nextQuestion,
@@ -202,6 +208,7 @@ class _$CreateRoomImpl implements _CreateRoom {
     required TResult Function(String roomId, String playerName) joinRoom,
     required TResult Function(String roomId, String player, int score)
         updateScore,
+    required TResult Function(int playerIndex, bool isCorrect) answerEvent,
     required TResult Function(String roomId) loadRoom,
     required TResult Function(int remainingTime) timerUpdated,
     required TResult Function() nextQuestion,
@@ -219,6 +226,7 @@ class _$CreateRoomImpl implements _CreateRoom {
     TResult? Function()? start1v1,
     TResult? Function(String roomId, String playerName)? joinRoom,
     TResult? Function(String roomId, String player, int score)? updateScore,
+    TResult? Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult? Function(String roomId)? loadRoom,
     TResult? Function(int remainingTime)? timerUpdated,
     TResult? Function()? nextQuestion,
@@ -236,6 +244,7 @@ class _$CreateRoomImpl implements _CreateRoom {
     TResult Function()? start1v1,
     TResult Function(String roomId, String playerName)? joinRoom,
     TResult Function(String roomId, String player, int score)? updateScore,
+    TResult Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult Function(String roomId)? loadRoom,
     TResult Function(int remainingTime)? timerUpdated,
     TResult Function()? nextQuestion,
@@ -257,6 +266,7 @@ class _$CreateRoomImpl implements _CreateRoom {
     required TResult Function(_Start1v1 value) start1v1,
     required TResult Function(_JoinRoom value) joinRoom,
     required TResult Function(_UpdateScore value) updateScore,
+    required TResult Function(_AnswerEvent value) answerEvent,
     required TResult Function(_LoadRoom value) loadRoom,
     required TResult Function(_TimerUpdated value) timerUpdated,
     required TResult Function(_NextQuestion value) nextQuestion,
@@ -274,6 +284,7 @@ class _$CreateRoomImpl implements _CreateRoom {
     TResult? Function(_Start1v1 value)? start1v1,
     TResult? Function(_JoinRoom value)? joinRoom,
     TResult? Function(_UpdateScore value)? updateScore,
+    TResult? Function(_AnswerEvent value)? answerEvent,
     TResult? Function(_LoadRoom value)? loadRoom,
     TResult? Function(_TimerUpdated value)? timerUpdated,
     TResult? Function(_NextQuestion value)? nextQuestion,
@@ -291,6 +302,7 @@ class _$CreateRoomImpl implements _CreateRoom {
     TResult Function(_Start1v1 value)? start1v1,
     TResult Function(_JoinRoom value)? joinRoom,
     TResult Function(_UpdateScore value)? updateScore,
+    TResult Function(_AnswerEvent value)? answerEvent,
     TResult Function(_LoadRoom value)? loadRoom,
     TResult Function(_TimerUpdated value)? timerUpdated,
     TResult Function(_NextQuestion value)? nextQuestion,
@@ -361,6 +373,7 @@ class _$InitializeGameImpl implements _InitializeGame {
     required TResult Function(String roomId, String playerName) joinRoom,
     required TResult Function(String roomId, String player, int score)
         updateScore,
+    required TResult Function(int playerIndex, bool isCorrect) answerEvent,
     required TResult Function(String roomId) loadRoom,
     required TResult Function(int remainingTime) timerUpdated,
     required TResult Function() nextQuestion,
@@ -378,6 +391,7 @@ class _$InitializeGameImpl implements _InitializeGame {
     TResult? Function()? start1v1,
     TResult? Function(String roomId, String playerName)? joinRoom,
     TResult? Function(String roomId, String player, int score)? updateScore,
+    TResult? Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult? Function(String roomId)? loadRoom,
     TResult? Function(int remainingTime)? timerUpdated,
     TResult? Function()? nextQuestion,
@@ -395,6 +409,7 @@ class _$InitializeGameImpl implements _InitializeGame {
     TResult Function()? start1v1,
     TResult Function(String roomId, String playerName)? joinRoom,
     TResult Function(String roomId, String player, int score)? updateScore,
+    TResult Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult Function(String roomId)? loadRoom,
     TResult Function(int remainingTime)? timerUpdated,
     TResult Function()? nextQuestion,
@@ -416,6 +431,7 @@ class _$InitializeGameImpl implements _InitializeGame {
     required TResult Function(_Start1v1 value) start1v1,
     required TResult Function(_JoinRoom value) joinRoom,
     required TResult Function(_UpdateScore value) updateScore,
+    required TResult Function(_AnswerEvent value) answerEvent,
     required TResult Function(_LoadRoom value) loadRoom,
     required TResult Function(_TimerUpdated value) timerUpdated,
     required TResult Function(_NextQuestion value) nextQuestion,
@@ -433,6 +449,7 @@ class _$InitializeGameImpl implements _InitializeGame {
     TResult? Function(_Start1v1 value)? start1v1,
     TResult? Function(_JoinRoom value)? joinRoom,
     TResult? Function(_UpdateScore value)? updateScore,
+    TResult? Function(_AnswerEvent value)? answerEvent,
     TResult? Function(_LoadRoom value)? loadRoom,
     TResult? Function(_TimerUpdated value)? timerUpdated,
     TResult? Function(_NextQuestion value)? nextQuestion,
@@ -450,6 +467,7 @@ class _$InitializeGameImpl implements _InitializeGame {
     TResult Function(_Start1v1 value)? start1v1,
     TResult Function(_JoinRoom value)? joinRoom,
     TResult Function(_UpdateScore value)? updateScore,
+    TResult Function(_AnswerEvent value)? answerEvent,
     TResult Function(_LoadRoom value)? loadRoom,
     TResult Function(_TimerUpdated value)? timerUpdated,
     TResult Function(_NextQuestion value)? nextQuestion,
@@ -512,6 +530,7 @@ class _$StartMultiplayerImpl implements _StartMultiplayer {
     required TResult Function(String roomId, String playerName) joinRoom,
     required TResult Function(String roomId, String player, int score)
         updateScore,
+    required TResult Function(int playerIndex, bool isCorrect) answerEvent,
     required TResult Function(String roomId) loadRoom,
     required TResult Function(int remainingTime) timerUpdated,
     required TResult Function() nextQuestion,
@@ -529,6 +548,7 @@ class _$StartMultiplayerImpl implements _StartMultiplayer {
     TResult? Function()? start1v1,
     TResult? Function(String roomId, String playerName)? joinRoom,
     TResult? Function(String roomId, String player, int score)? updateScore,
+    TResult? Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult? Function(String roomId)? loadRoom,
     TResult? Function(int remainingTime)? timerUpdated,
     TResult? Function()? nextQuestion,
@@ -546,6 +566,7 @@ class _$StartMultiplayerImpl implements _StartMultiplayer {
     TResult Function()? start1v1,
     TResult Function(String roomId, String playerName)? joinRoom,
     TResult Function(String roomId, String player, int score)? updateScore,
+    TResult Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult Function(String roomId)? loadRoom,
     TResult Function(int remainingTime)? timerUpdated,
     TResult Function()? nextQuestion,
@@ -567,6 +588,7 @@ class _$StartMultiplayerImpl implements _StartMultiplayer {
     required TResult Function(_Start1v1 value) start1v1,
     required TResult Function(_JoinRoom value) joinRoom,
     required TResult Function(_UpdateScore value) updateScore,
+    required TResult Function(_AnswerEvent value) answerEvent,
     required TResult Function(_LoadRoom value) loadRoom,
     required TResult Function(_TimerUpdated value) timerUpdated,
     required TResult Function(_NextQuestion value) nextQuestion,
@@ -584,6 +606,7 @@ class _$StartMultiplayerImpl implements _StartMultiplayer {
     TResult? Function(_Start1v1 value)? start1v1,
     TResult? Function(_JoinRoom value)? joinRoom,
     TResult? Function(_UpdateScore value)? updateScore,
+    TResult? Function(_AnswerEvent value)? answerEvent,
     TResult? Function(_LoadRoom value)? loadRoom,
     TResult? Function(_TimerUpdated value)? timerUpdated,
     TResult? Function(_NextQuestion value)? nextQuestion,
@@ -601,6 +624,7 @@ class _$StartMultiplayerImpl implements _StartMultiplayer {
     TResult Function(_Start1v1 value)? start1v1,
     TResult Function(_JoinRoom value)? joinRoom,
     TResult Function(_UpdateScore value)? updateScore,
+    TResult Function(_AnswerEvent value)? answerEvent,
     TResult Function(_LoadRoom value)? loadRoom,
     TResult Function(_TimerUpdated value)? timerUpdated,
     TResult Function(_NextQuestion value)? nextQuestion,
@@ -663,6 +687,7 @@ class _$Start1v1Impl implements _Start1v1 {
     required TResult Function(String roomId, String playerName) joinRoom,
     required TResult Function(String roomId, String player, int score)
         updateScore,
+    required TResult Function(int playerIndex, bool isCorrect) answerEvent,
     required TResult Function(String roomId) loadRoom,
     required TResult Function(int remainingTime) timerUpdated,
     required TResult Function() nextQuestion,
@@ -680,6 +705,7 @@ class _$Start1v1Impl implements _Start1v1 {
     TResult? Function()? start1v1,
     TResult? Function(String roomId, String playerName)? joinRoom,
     TResult? Function(String roomId, String player, int score)? updateScore,
+    TResult? Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult? Function(String roomId)? loadRoom,
     TResult? Function(int remainingTime)? timerUpdated,
     TResult? Function()? nextQuestion,
@@ -697,6 +723,7 @@ class _$Start1v1Impl implements _Start1v1 {
     TResult Function()? start1v1,
     TResult Function(String roomId, String playerName)? joinRoom,
     TResult Function(String roomId, String player, int score)? updateScore,
+    TResult Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult Function(String roomId)? loadRoom,
     TResult Function(int remainingTime)? timerUpdated,
     TResult Function()? nextQuestion,
@@ -718,6 +745,7 @@ class _$Start1v1Impl implements _Start1v1 {
     required TResult Function(_Start1v1 value) start1v1,
     required TResult Function(_JoinRoom value) joinRoom,
     required TResult Function(_UpdateScore value) updateScore,
+    required TResult Function(_AnswerEvent value) answerEvent,
     required TResult Function(_LoadRoom value) loadRoom,
     required TResult Function(_TimerUpdated value) timerUpdated,
     required TResult Function(_NextQuestion value) nextQuestion,
@@ -735,6 +763,7 @@ class _$Start1v1Impl implements _Start1v1 {
     TResult? Function(_Start1v1 value)? start1v1,
     TResult? Function(_JoinRoom value)? joinRoom,
     TResult? Function(_UpdateScore value)? updateScore,
+    TResult? Function(_AnswerEvent value)? answerEvent,
     TResult? Function(_LoadRoom value)? loadRoom,
     TResult? Function(_TimerUpdated value)? timerUpdated,
     TResult? Function(_NextQuestion value)? nextQuestion,
@@ -752,6 +781,7 @@ class _$Start1v1Impl implements _Start1v1 {
     TResult Function(_Start1v1 value)? start1v1,
     TResult Function(_JoinRoom value)? joinRoom,
     TResult Function(_UpdateScore value)? updateScore,
+    TResult Function(_AnswerEvent value)? answerEvent,
     TResult Function(_LoadRoom value)? loadRoom,
     TResult Function(_TimerUpdated value)? timerUpdated,
     TResult Function(_NextQuestion value)? nextQuestion,
@@ -849,6 +879,7 @@ class _$JoinRoomImpl implements _JoinRoom {
     required TResult Function(String roomId, String playerName) joinRoom,
     required TResult Function(String roomId, String player, int score)
         updateScore,
+    required TResult Function(int playerIndex, bool isCorrect) answerEvent,
     required TResult Function(String roomId) loadRoom,
     required TResult Function(int remainingTime) timerUpdated,
     required TResult Function() nextQuestion,
@@ -866,6 +897,7 @@ class _$JoinRoomImpl implements _JoinRoom {
     TResult? Function()? start1v1,
     TResult? Function(String roomId, String playerName)? joinRoom,
     TResult? Function(String roomId, String player, int score)? updateScore,
+    TResult? Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult? Function(String roomId)? loadRoom,
     TResult? Function(int remainingTime)? timerUpdated,
     TResult? Function()? nextQuestion,
@@ -883,6 +915,7 @@ class _$JoinRoomImpl implements _JoinRoom {
     TResult Function()? start1v1,
     TResult Function(String roomId, String playerName)? joinRoom,
     TResult Function(String roomId, String player, int score)? updateScore,
+    TResult Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult Function(String roomId)? loadRoom,
     TResult Function(int remainingTime)? timerUpdated,
     TResult Function()? nextQuestion,
@@ -904,6 +937,7 @@ class _$JoinRoomImpl implements _JoinRoom {
     required TResult Function(_Start1v1 value) start1v1,
     required TResult Function(_JoinRoom value) joinRoom,
     required TResult Function(_UpdateScore value) updateScore,
+    required TResult Function(_AnswerEvent value) answerEvent,
     required TResult Function(_LoadRoom value) loadRoom,
     required TResult Function(_TimerUpdated value) timerUpdated,
     required TResult Function(_NextQuestion value) nextQuestion,
@@ -921,6 +955,7 @@ class _$JoinRoomImpl implements _JoinRoom {
     TResult? Function(_Start1v1 value)? start1v1,
     TResult? Function(_JoinRoom value)? joinRoom,
     TResult? Function(_UpdateScore value)? updateScore,
+    TResult? Function(_AnswerEvent value)? answerEvent,
     TResult? Function(_LoadRoom value)? loadRoom,
     TResult? Function(_TimerUpdated value)? timerUpdated,
     TResult? Function(_NextQuestion value)? nextQuestion,
@@ -938,6 +973,7 @@ class _$JoinRoomImpl implements _JoinRoom {
     TResult Function(_Start1v1 value)? start1v1,
     TResult Function(_JoinRoom value)? joinRoom,
     TResult Function(_UpdateScore value)? updateScore,
+    TResult Function(_AnswerEvent value)? answerEvent,
     TResult Function(_LoadRoom value)? loadRoom,
     TResult Function(_TimerUpdated value)? timerUpdated,
     TResult Function(_NextQuestion value)? nextQuestion,
@@ -1051,6 +1087,7 @@ class _$UpdateScoreImpl implements _UpdateScore {
     required TResult Function(String roomId, String playerName) joinRoom,
     required TResult Function(String roomId, String player, int score)
         updateScore,
+    required TResult Function(int playerIndex, bool isCorrect) answerEvent,
     required TResult Function(String roomId) loadRoom,
     required TResult Function(int remainingTime) timerUpdated,
     required TResult Function() nextQuestion,
@@ -1068,6 +1105,7 @@ class _$UpdateScoreImpl implements _UpdateScore {
     TResult? Function()? start1v1,
     TResult? Function(String roomId, String playerName)? joinRoom,
     TResult? Function(String roomId, String player, int score)? updateScore,
+    TResult? Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult? Function(String roomId)? loadRoom,
     TResult? Function(int remainingTime)? timerUpdated,
     TResult? Function()? nextQuestion,
@@ -1085,6 +1123,7 @@ class _$UpdateScoreImpl implements _UpdateScore {
     TResult Function()? start1v1,
     TResult Function(String roomId, String playerName)? joinRoom,
     TResult Function(String roomId, String player, int score)? updateScore,
+    TResult Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult Function(String roomId)? loadRoom,
     TResult Function(int remainingTime)? timerUpdated,
     TResult Function()? nextQuestion,
@@ -1106,6 +1145,7 @@ class _$UpdateScoreImpl implements _UpdateScore {
     required TResult Function(_Start1v1 value) start1v1,
     required TResult Function(_JoinRoom value) joinRoom,
     required TResult Function(_UpdateScore value) updateScore,
+    required TResult Function(_AnswerEvent value) answerEvent,
     required TResult Function(_LoadRoom value) loadRoom,
     required TResult Function(_TimerUpdated value) timerUpdated,
     required TResult Function(_NextQuestion value) nextQuestion,
@@ -1123,6 +1163,7 @@ class _$UpdateScoreImpl implements _UpdateScore {
     TResult? Function(_Start1v1 value)? start1v1,
     TResult? Function(_JoinRoom value)? joinRoom,
     TResult? Function(_UpdateScore value)? updateScore,
+    TResult? Function(_AnswerEvent value)? answerEvent,
     TResult? Function(_LoadRoom value)? loadRoom,
     TResult? Function(_TimerUpdated value)? timerUpdated,
     TResult? Function(_NextQuestion value)? nextQuestion,
@@ -1140,6 +1181,7 @@ class _$UpdateScoreImpl implements _UpdateScore {
     TResult Function(_Start1v1 value)? start1v1,
     TResult Function(_JoinRoom value)? joinRoom,
     TResult Function(_UpdateScore value)? updateScore,
+    TResult Function(_AnswerEvent value)? answerEvent,
     TResult Function(_LoadRoom value)? loadRoom,
     TResult Function(_TimerUpdated value)? timerUpdated,
     TResult Function(_NextQuestion value)? nextQuestion,
@@ -1164,6 +1206,207 @@ abstract class _UpdateScore implements GameEvent {
   int get score;
   @JsonKey(ignore: true)
   _$$UpdateScoreImplCopyWith<_$UpdateScoreImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AnswerEventImplCopyWith<$Res> {
+  factory _$$AnswerEventImplCopyWith(
+          _$AnswerEventImpl value, $Res Function(_$AnswerEventImpl) then) =
+      __$$AnswerEventImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int playerIndex, bool isCorrect});
+}
+
+/// @nodoc
+class __$$AnswerEventImplCopyWithImpl<$Res>
+    extends _$GameEventCopyWithImpl<$Res, _$AnswerEventImpl>
+    implements _$$AnswerEventImplCopyWith<$Res> {
+  __$$AnswerEventImplCopyWithImpl(
+      _$AnswerEventImpl _value, $Res Function(_$AnswerEventImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? playerIndex = null,
+    Object? isCorrect = null,
+  }) {
+    return _then(_$AnswerEventImpl(
+      playerIndex: null == playerIndex
+          ? _value.playerIndex
+          : playerIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      isCorrect: null == isCorrect
+          ? _value.isCorrect
+          : isCorrect // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AnswerEventImpl implements _AnswerEvent {
+  const _$AnswerEventImpl({required this.playerIndex, required this.isCorrect});
+
+  @override
+  final int playerIndex;
+  @override
+  final bool isCorrect;
+
+  @override
+  String toString() {
+    return 'GameEvent.answerEvent(playerIndex: $playerIndex, isCorrect: $isCorrect)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AnswerEventImpl &&
+            (identical(other.playerIndex, playerIndex) ||
+                other.playerIndex == playerIndex) &&
+            (identical(other.isCorrect, isCorrect) ||
+                other.isCorrect == isCorrect));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, playerIndex, isCorrect);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AnswerEventImplCopyWith<_$AnswerEventImpl> get copyWith =>
+      __$$AnswerEventImplCopyWithImpl<_$AnswerEventImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String roomId, String playerName) createRoom,
+    required TResult Function() initializeGame,
+    required TResult Function() startMultiplayer,
+    required TResult Function() start1v1,
+    required TResult Function(String roomId, String playerName) joinRoom,
+    required TResult Function(String roomId, String player, int score)
+        updateScore,
+    required TResult Function(int playerIndex, bool isCorrect) answerEvent,
+    required TResult Function(String roomId) loadRoom,
+    required TResult Function(int remainingTime) timerUpdated,
+    required TResult Function() nextQuestion,
+    required TResult Function() endGame,
+  }) {
+    return answerEvent(playerIndex, isCorrect);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String roomId, String playerName)? createRoom,
+    TResult? Function()? initializeGame,
+    TResult? Function()? startMultiplayer,
+    TResult? Function()? start1v1,
+    TResult? Function(String roomId, String playerName)? joinRoom,
+    TResult? Function(String roomId, String player, int score)? updateScore,
+    TResult? Function(int playerIndex, bool isCorrect)? answerEvent,
+    TResult? Function(String roomId)? loadRoom,
+    TResult? Function(int remainingTime)? timerUpdated,
+    TResult? Function()? nextQuestion,
+    TResult? Function()? endGame,
+  }) {
+    return answerEvent?.call(playerIndex, isCorrect);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String roomId, String playerName)? createRoom,
+    TResult Function()? initializeGame,
+    TResult Function()? startMultiplayer,
+    TResult Function()? start1v1,
+    TResult Function(String roomId, String playerName)? joinRoom,
+    TResult Function(String roomId, String player, int score)? updateScore,
+    TResult Function(int playerIndex, bool isCorrect)? answerEvent,
+    TResult Function(String roomId)? loadRoom,
+    TResult Function(int remainingTime)? timerUpdated,
+    TResult Function()? nextQuestion,
+    TResult Function()? endGame,
+    required TResult orElse(),
+  }) {
+    if (answerEvent != null) {
+      return answerEvent(playerIndex, isCorrect);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CreateRoom value) createRoom,
+    required TResult Function(_InitializeGame value) initializeGame,
+    required TResult Function(_StartMultiplayer value) startMultiplayer,
+    required TResult Function(_Start1v1 value) start1v1,
+    required TResult Function(_JoinRoom value) joinRoom,
+    required TResult Function(_UpdateScore value) updateScore,
+    required TResult Function(_AnswerEvent value) answerEvent,
+    required TResult Function(_LoadRoom value) loadRoom,
+    required TResult Function(_TimerUpdated value) timerUpdated,
+    required TResult Function(_NextQuestion value) nextQuestion,
+    required TResult Function(_EndGame value) endGame,
+  }) {
+    return answerEvent(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CreateRoom value)? createRoom,
+    TResult? Function(_InitializeGame value)? initializeGame,
+    TResult? Function(_StartMultiplayer value)? startMultiplayer,
+    TResult? Function(_Start1v1 value)? start1v1,
+    TResult? Function(_JoinRoom value)? joinRoom,
+    TResult? Function(_UpdateScore value)? updateScore,
+    TResult? Function(_AnswerEvent value)? answerEvent,
+    TResult? Function(_LoadRoom value)? loadRoom,
+    TResult? Function(_TimerUpdated value)? timerUpdated,
+    TResult? Function(_NextQuestion value)? nextQuestion,
+    TResult? Function(_EndGame value)? endGame,
+  }) {
+    return answerEvent?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CreateRoom value)? createRoom,
+    TResult Function(_InitializeGame value)? initializeGame,
+    TResult Function(_StartMultiplayer value)? startMultiplayer,
+    TResult Function(_Start1v1 value)? start1v1,
+    TResult Function(_JoinRoom value)? joinRoom,
+    TResult Function(_UpdateScore value)? updateScore,
+    TResult Function(_AnswerEvent value)? answerEvent,
+    TResult Function(_LoadRoom value)? loadRoom,
+    TResult Function(_TimerUpdated value)? timerUpdated,
+    TResult Function(_NextQuestion value)? nextQuestion,
+    TResult Function(_EndGame value)? endGame,
+    required TResult orElse(),
+  }) {
+    if (answerEvent != null) {
+      return answerEvent(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AnswerEvent implements GameEvent {
+  const factory _AnswerEvent(
+      {required final int playerIndex,
+      required final bool isCorrect}) = _$AnswerEventImpl;
+
+  int get playerIndex;
+  bool get isCorrect;
+  @JsonKey(ignore: true)
+  _$$AnswerEventImplCopyWith<_$AnswerEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1238,6 +1481,7 @@ class _$LoadRoomImpl implements _LoadRoom {
     required TResult Function(String roomId, String playerName) joinRoom,
     required TResult Function(String roomId, String player, int score)
         updateScore,
+    required TResult Function(int playerIndex, bool isCorrect) answerEvent,
     required TResult Function(String roomId) loadRoom,
     required TResult Function(int remainingTime) timerUpdated,
     required TResult Function() nextQuestion,
@@ -1255,6 +1499,7 @@ class _$LoadRoomImpl implements _LoadRoom {
     TResult? Function()? start1v1,
     TResult? Function(String roomId, String playerName)? joinRoom,
     TResult? Function(String roomId, String player, int score)? updateScore,
+    TResult? Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult? Function(String roomId)? loadRoom,
     TResult? Function(int remainingTime)? timerUpdated,
     TResult? Function()? nextQuestion,
@@ -1272,6 +1517,7 @@ class _$LoadRoomImpl implements _LoadRoom {
     TResult Function()? start1v1,
     TResult Function(String roomId, String playerName)? joinRoom,
     TResult Function(String roomId, String player, int score)? updateScore,
+    TResult Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult Function(String roomId)? loadRoom,
     TResult Function(int remainingTime)? timerUpdated,
     TResult Function()? nextQuestion,
@@ -1293,6 +1539,7 @@ class _$LoadRoomImpl implements _LoadRoom {
     required TResult Function(_Start1v1 value) start1v1,
     required TResult Function(_JoinRoom value) joinRoom,
     required TResult Function(_UpdateScore value) updateScore,
+    required TResult Function(_AnswerEvent value) answerEvent,
     required TResult Function(_LoadRoom value) loadRoom,
     required TResult Function(_TimerUpdated value) timerUpdated,
     required TResult Function(_NextQuestion value) nextQuestion,
@@ -1310,6 +1557,7 @@ class _$LoadRoomImpl implements _LoadRoom {
     TResult? Function(_Start1v1 value)? start1v1,
     TResult? Function(_JoinRoom value)? joinRoom,
     TResult? Function(_UpdateScore value)? updateScore,
+    TResult? Function(_AnswerEvent value)? answerEvent,
     TResult? Function(_LoadRoom value)? loadRoom,
     TResult? Function(_TimerUpdated value)? timerUpdated,
     TResult? Function(_NextQuestion value)? nextQuestion,
@@ -1327,6 +1575,7 @@ class _$LoadRoomImpl implements _LoadRoom {
     TResult Function(_Start1v1 value)? start1v1,
     TResult Function(_JoinRoom value)? joinRoom,
     TResult Function(_UpdateScore value)? updateScore,
+    TResult Function(_AnswerEvent value)? answerEvent,
     TResult Function(_LoadRoom value)? loadRoom,
     TResult Function(_TimerUpdated value)? timerUpdated,
     TResult Function(_NextQuestion value)? nextQuestion,
@@ -1421,6 +1670,7 @@ class _$TimerUpdatedImpl implements _TimerUpdated {
     required TResult Function(String roomId, String playerName) joinRoom,
     required TResult Function(String roomId, String player, int score)
         updateScore,
+    required TResult Function(int playerIndex, bool isCorrect) answerEvent,
     required TResult Function(String roomId) loadRoom,
     required TResult Function(int remainingTime) timerUpdated,
     required TResult Function() nextQuestion,
@@ -1438,6 +1688,7 @@ class _$TimerUpdatedImpl implements _TimerUpdated {
     TResult? Function()? start1v1,
     TResult? Function(String roomId, String playerName)? joinRoom,
     TResult? Function(String roomId, String player, int score)? updateScore,
+    TResult? Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult? Function(String roomId)? loadRoom,
     TResult? Function(int remainingTime)? timerUpdated,
     TResult? Function()? nextQuestion,
@@ -1455,6 +1706,7 @@ class _$TimerUpdatedImpl implements _TimerUpdated {
     TResult Function()? start1v1,
     TResult Function(String roomId, String playerName)? joinRoom,
     TResult Function(String roomId, String player, int score)? updateScore,
+    TResult Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult Function(String roomId)? loadRoom,
     TResult Function(int remainingTime)? timerUpdated,
     TResult Function()? nextQuestion,
@@ -1476,6 +1728,7 @@ class _$TimerUpdatedImpl implements _TimerUpdated {
     required TResult Function(_Start1v1 value) start1v1,
     required TResult Function(_JoinRoom value) joinRoom,
     required TResult Function(_UpdateScore value) updateScore,
+    required TResult Function(_AnswerEvent value) answerEvent,
     required TResult Function(_LoadRoom value) loadRoom,
     required TResult Function(_TimerUpdated value) timerUpdated,
     required TResult Function(_NextQuestion value) nextQuestion,
@@ -1493,6 +1746,7 @@ class _$TimerUpdatedImpl implements _TimerUpdated {
     TResult? Function(_Start1v1 value)? start1v1,
     TResult? Function(_JoinRoom value)? joinRoom,
     TResult? Function(_UpdateScore value)? updateScore,
+    TResult? Function(_AnswerEvent value)? answerEvent,
     TResult? Function(_LoadRoom value)? loadRoom,
     TResult? Function(_TimerUpdated value)? timerUpdated,
     TResult? Function(_NextQuestion value)? nextQuestion,
@@ -1510,6 +1764,7 @@ class _$TimerUpdatedImpl implements _TimerUpdated {
     TResult Function(_Start1v1 value)? start1v1,
     TResult Function(_JoinRoom value)? joinRoom,
     TResult Function(_UpdateScore value)? updateScore,
+    TResult Function(_AnswerEvent value)? answerEvent,
     TResult Function(_LoadRoom value)? loadRoom,
     TResult Function(_TimerUpdated value)? timerUpdated,
     TResult Function(_NextQuestion value)? nextQuestion,
@@ -1578,6 +1833,7 @@ class _$NextQuestionImpl implements _NextQuestion {
     required TResult Function(String roomId, String playerName) joinRoom,
     required TResult Function(String roomId, String player, int score)
         updateScore,
+    required TResult Function(int playerIndex, bool isCorrect) answerEvent,
     required TResult Function(String roomId) loadRoom,
     required TResult Function(int remainingTime) timerUpdated,
     required TResult Function() nextQuestion,
@@ -1595,6 +1851,7 @@ class _$NextQuestionImpl implements _NextQuestion {
     TResult? Function()? start1v1,
     TResult? Function(String roomId, String playerName)? joinRoom,
     TResult? Function(String roomId, String player, int score)? updateScore,
+    TResult? Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult? Function(String roomId)? loadRoom,
     TResult? Function(int remainingTime)? timerUpdated,
     TResult? Function()? nextQuestion,
@@ -1612,6 +1869,7 @@ class _$NextQuestionImpl implements _NextQuestion {
     TResult Function()? start1v1,
     TResult Function(String roomId, String playerName)? joinRoom,
     TResult Function(String roomId, String player, int score)? updateScore,
+    TResult Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult Function(String roomId)? loadRoom,
     TResult Function(int remainingTime)? timerUpdated,
     TResult Function()? nextQuestion,
@@ -1633,6 +1891,7 @@ class _$NextQuestionImpl implements _NextQuestion {
     required TResult Function(_Start1v1 value) start1v1,
     required TResult Function(_JoinRoom value) joinRoom,
     required TResult Function(_UpdateScore value) updateScore,
+    required TResult Function(_AnswerEvent value) answerEvent,
     required TResult Function(_LoadRoom value) loadRoom,
     required TResult Function(_TimerUpdated value) timerUpdated,
     required TResult Function(_NextQuestion value) nextQuestion,
@@ -1650,6 +1909,7 @@ class _$NextQuestionImpl implements _NextQuestion {
     TResult? Function(_Start1v1 value)? start1v1,
     TResult? Function(_JoinRoom value)? joinRoom,
     TResult? Function(_UpdateScore value)? updateScore,
+    TResult? Function(_AnswerEvent value)? answerEvent,
     TResult? Function(_LoadRoom value)? loadRoom,
     TResult? Function(_TimerUpdated value)? timerUpdated,
     TResult? Function(_NextQuestion value)? nextQuestion,
@@ -1667,6 +1927,7 @@ class _$NextQuestionImpl implements _NextQuestion {
     TResult Function(_Start1v1 value)? start1v1,
     TResult Function(_JoinRoom value)? joinRoom,
     TResult Function(_UpdateScore value)? updateScore,
+    TResult Function(_AnswerEvent value)? answerEvent,
     TResult Function(_LoadRoom value)? loadRoom,
     TResult Function(_TimerUpdated value)? timerUpdated,
     TResult Function(_NextQuestion value)? nextQuestion,
@@ -1729,6 +1990,7 @@ class _$EndGameImpl implements _EndGame {
     required TResult Function(String roomId, String playerName) joinRoom,
     required TResult Function(String roomId, String player, int score)
         updateScore,
+    required TResult Function(int playerIndex, bool isCorrect) answerEvent,
     required TResult Function(String roomId) loadRoom,
     required TResult Function(int remainingTime) timerUpdated,
     required TResult Function() nextQuestion,
@@ -1746,6 +2008,7 @@ class _$EndGameImpl implements _EndGame {
     TResult? Function()? start1v1,
     TResult? Function(String roomId, String playerName)? joinRoom,
     TResult? Function(String roomId, String player, int score)? updateScore,
+    TResult? Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult? Function(String roomId)? loadRoom,
     TResult? Function(int remainingTime)? timerUpdated,
     TResult? Function()? nextQuestion,
@@ -1763,6 +2026,7 @@ class _$EndGameImpl implements _EndGame {
     TResult Function()? start1v1,
     TResult Function(String roomId, String playerName)? joinRoom,
     TResult Function(String roomId, String player, int score)? updateScore,
+    TResult Function(int playerIndex, bool isCorrect)? answerEvent,
     TResult Function(String roomId)? loadRoom,
     TResult Function(int remainingTime)? timerUpdated,
     TResult Function()? nextQuestion,
@@ -1784,6 +2048,7 @@ class _$EndGameImpl implements _EndGame {
     required TResult Function(_Start1v1 value) start1v1,
     required TResult Function(_JoinRoom value) joinRoom,
     required TResult Function(_UpdateScore value) updateScore,
+    required TResult Function(_AnswerEvent value) answerEvent,
     required TResult Function(_LoadRoom value) loadRoom,
     required TResult Function(_TimerUpdated value) timerUpdated,
     required TResult Function(_NextQuestion value) nextQuestion,
@@ -1801,6 +2066,7 @@ class _$EndGameImpl implements _EndGame {
     TResult? Function(_Start1v1 value)? start1v1,
     TResult? Function(_JoinRoom value)? joinRoom,
     TResult? Function(_UpdateScore value)? updateScore,
+    TResult? Function(_AnswerEvent value)? answerEvent,
     TResult? Function(_LoadRoom value)? loadRoom,
     TResult? Function(_TimerUpdated value)? timerUpdated,
     TResult? Function(_NextQuestion value)? nextQuestion,
@@ -1818,6 +2084,7 @@ class _$EndGameImpl implements _EndGame {
     TResult Function(_Start1v1 value)? start1v1,
     TResult Function(_JoinRoom value)? joinRoom,
     TResult Function(_UpdateScore value)? updateScore,
+    TResult Function(_AnswerEvent value)? answerEvent,
     TResult Function(_LoadRoom value)? loadRoom,
     TResult Function(_TimerUpdated value)? timerUpdated,
     TResult Function(_NextQuestion value)? nextQuestion,
@@ -1844,6 +2111,8 @@ mixin _$GameState {
   int get currentQuestion => throw _privateConstructorUsedError;
   int get remainingTime => throw _privateConstructorUsedError;
   GameStatus get gameStatus => throw _privateConstructorUsedError;
+  List<Question> get questions =>
+      throw _privateConstructorUsedError; // Přidání seznamu otázek
   String? get errorMessage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -1864,6 +2133,7 @@ abstract class $GameStateCopyWith<$Res> {
       int currentQuestion,
       int remainingTime,
       GameStatus gameStatus,
+      List<Question> questions,
       String? errorMessage});
 }
 
@@ -1887,6 +2157,7 @@ class _$GameStateCopyWithImpl<$Res, $Val extends GameState>
     Object? currentQuestion = null,
     Object? remainingTime = null,
     Object? gameStatus = null,
+    Object? questions = null,
     Object? errorMessage = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1918,6 +2189,10 @@ class _$GameStateCopyWithImpl<$Res, $Val extends GameState>
           ? _value.gameStatus
           : gameStatus // ignore: cast_nullable_to_non_nullable
               as GameStatus,
+      questions: null == questions
+          ? _value.questions
+          : questions // ignore: cast_nullable_to_non_nullable
+              as List<Question>,
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -1942,6 +2217,7 @@ abstract class _$$GameStateImplCopyWith<$Res>
       int currentQuestion,
       int remainingTime,
       GameStatus gameStatus,
+      List<Question> questions,
       String? errorMessage});
 }
 
@@ -1963,6 +2239,7 @@ class __$$GameStateImplCopyWithImpl<$Res>
     Object? currentQuestion = null,
     Object? remainingTime = null,
     Object? gameStatus = null,
+    Object? questions = null,
     Object? errorMessage = freezed,
   }) {
     return _then(_$GameStateImpl(
@@ -1994,6 +2271,10 @@ class __$$GameStateImplCopyWithImpl<$Res>
           ? _value.gameStatus
           : gameStatus // ignore: cast_nullable_to_non_nullable
               as GameStatus,
+      questions: null == questions
+          ? _value._questions
+          : questions // ignore: cast_nullable_to_non_nullable
+              as List<Question>,
       errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
@@ -2013,7 +2294,9 @@ class _$GameStateImpl implements _GameState {
       required this.currentQuestion,
       required this.remainingTime,
       required this.gameStatus,
-      this.errorMessage});
+      required final List<Question> questions,
+      this.errorMessage})
+      : _questions = questions;
 
   @override
   final String roomId;
@@ -2029,12 +2312,21 @@ class _$GameStateImpl implements _GameState {
   final int remainingTime;
   @override
   final GameStatus gameStatus;
+  final List<Question> _questions;
+  @override
+  List<Question> get questions {
+    if (_questions is EqualUnmodifiableListView) return _questions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_questions);
+  }
+
+// Přidání seznamu otázek
   @override
   final String? errorMessage;
 
   @override
   String toString() {
-    return 'GameState(roomId: $roomId, playerName: $playerName, player1Score: $player1Score, player2Score: $player2Score, currentQuestion: $currentQuestion, remainingTime: $remainingTime, gameStatus: $gameStatus, errorMessage: $errorMessage)';
+    return 'GameState(roomId: $roomId, playerName: $playerName, player1Score: $player1Score, player2Score: $player2Score, currentQuestion: $currentQuestion, remainingTime: $remainingTime, gameStatus: $gameStatus, questions: $questions, errorMessage: $errorMessage)';
   }
 
   @override
@@ -2055,13 +2347,24 @@ class _$GameStateImpl implements _GameState {
                 other.remainingTime == remainingTime) &&
             (identical(other.gameStatus, gameStatus) ||
                 other.gameStatus == gameStatus) &&
+            const DeepCollectionEquality()
+                .equals(other._questions, _questions) &&
             (identical(other.errorMessage, errorMessage) ||
                 other.errorMessage == errorMessage));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, roomId, playerName, player1Score,
-      player2Score, currentQuestion, remainingTime, gameStatus, errorMessage);
+  int get hashCode => Object.hash(
+      runtimeType,
+      roomId,
+      playerName,
+      player1Score,
+      player2Score,
+      currentQuestion,
+      remainingTime,
+      gameStatus,
+      const DeepCollectionEquality().hash(_questions),
+      errorMessage);
 
   @JsonKey(ignore: true)
   @override
@@ -2079,6 +2382,7 @@ abstract class _GameState implements GameState {
       required final int currentQuestion,
       required final int remainingTime,
       required final GameStatus gameStatus,
+      required final List<Question> questions,
       final String? errorMessage}) = _$GameStateImpl;
 
   @override
@@ -2096,6 +2400,8 @@ abstract class _GameState implements GameState {
   @override
   GameStatus get gameStatus;
   @override
+  List<Question> get questions;
+  @override // Přidání seznamu otázek
   String? get errorMessage;
   @override
   @JsonKey(ignore: true)

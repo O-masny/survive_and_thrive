@@ -5,30 +5,28 @@ import 'package:flutter/material.dart';
 import 'package:survive_and_thrive/game/game_bloc/game_bloc.dart';
 
 class TimerComponent extends PositionComponent {
-  final GameBloc gameBloc;
+  final int totalTime;
+  int remainingTime;
+  final GameBloc gameBloc; // Injecting the GameBloc
 
-  TimerComponent({required this.gameBloc});
+  TimerComponent({required this.totalTime, required this.gameBloc})
+      : remainingTime = totalTime;
 
   @override
-  Future<void> onLoad() async {
-    super.onLoad();
-    size = Vector2(200, 50); // Velikost textové oblasti
-    position = Vector2(10, 50); // Pozice časovače
+  void update(double dt) {
+    super.update(dt);
+    remainingTime -= dt.toInt();
+    if (remainingTime <= 0) {
+      // Čas vypršel, přejděte na další otázku nebo udělejte nějakou akci
+      gameBloc.add(GameEvent.nextQuestion());
+    }
   }
 
   @override
   void render(Canvas canvas) {
     super.render(canvas);
-
-    final textPainter = TextPainter(
-      text: TextSpan(
-        text: "Time: ${gameBloc.state.remainingTime}s",
-        style: const TextStyle(color: Colors.white, fontSize: 20),
-      ),
-      textDirection: TextDirection.ltr,
-    );
-
-    textPainter.layout();
-    textPainter.paint(canvas, Offset(position.x, position.y));
+    final paint = Paint()..color = Colors.red;
+    final barWidth = (remainingTime / totalTime) * size.x;
+    canvas.drawRect(Rect.fromLTWH(0, 0, barWidth, 10), paint);
   }
 }

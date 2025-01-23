@@ -1,9 +1,9 @@
-
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
-import 'package:survive_and_thrive/game/game.dart';
+import 'package:survive_and_thrive/game/quiz_board.dart';
 
-class QuestionCardComponent extends PositionComponent with HasGameRef<QuizGame> {
+class QuestionCardComponent extends PositionComponent
+    with HasGameRef<QuizBoardComponent> {
   @override
   void render(Canvas canvas) {
     super.render(canvas);
