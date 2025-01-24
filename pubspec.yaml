@@ -105,5 +105,17 @@ flutter:
         - asset:  assets/fonts/quilon/Quilon-Regular.ttf
         - asset:  assets/fonts/quilon/Quilon-Medium.ttf
           weight: 700
+    - family: Synonym
+      fonts:
+        - asset:  assets/fonts/synonym/Synonym-Bold.ttf
+        - asset:  assets/fonts/synonym/Synonym-Regular.ttf
+        - asset:  assets/fonts/synonym/Synonym-Medium.ttf
+          weight: 700
+    - family: Nippo
+      fonts:
+        - asset:  assets/fonts/nippo/Nippo-Bold.ttf
+        - asset:  assets/fonts/nippo/Nippo-Regular.ttf
+        - asset:  assets/fonts/nippo/Nippo-Medium.ttf
+          weight: 700
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
