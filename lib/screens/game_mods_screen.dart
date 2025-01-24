@@ -15,7 +15,7 @@ class GameModesScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Hrát'),
+        title: const Text('Herní režim'),
       ),
       body: BlocListener<GameBloc, GameState>(
         bloc: gameBloc,
@@ -33,6 +33,7 @@ class GameModesScreen extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 ElevatedButton(
                   onPressed: () {
@@ -43,14 +44,11 @@ class GameModesScreen extends StatelessWidget {
                                 game: QuizBoardComponent(
                                     gameBloc: gameBloc,
                                     onGameOver: () {
-                                      // Přejdeme na GameOverScreen, když hra skončí
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                GameOverWidget(
-                                             
-                                                )),
+                                                GameOverWidget()),
                                       ); // Předáváme blok do hry
                                     }))));
                   },

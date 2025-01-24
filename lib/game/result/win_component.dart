@@ -16,7 +16,8 @@ class _GameOverWidgetState extends State<GameOverWidget> {
     super.initState();
     // Initialize the confetti controller
     _confettiController =
-        ConfettiController(duration: const Duration(seconds: 10));
+        ConfettiController(duration: const Duration(seconds: 3));
+    _confettiController.play(); // Start the confetti animation immediately
   }
 
   @override
@@ -30,7 +31,6 @@ class _GameOverWidgetState extends State<GameOverWidget> {
   Widget build(BuildContext context) {
     // Determine the winner text based on the `isPlayer1Winner` flag
     String winnerText = true ? "Player 1 Wins!" : "Player 2 Wins!";
-    _confettiController.play(); // Start the confetti animation immediately
 
     return Scaffold(
       backgroundColor: Colors.white,

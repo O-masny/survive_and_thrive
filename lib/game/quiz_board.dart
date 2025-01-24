@@ -8,6 +8,8 @@ import 'package:survive_and_thrive/game/game_bloc/game_bloc.dart';
 class QuizBoardComponent extends FlameGame {
   final GameBloc gameBloc;
   final VoidCallback onGameOver; // Callback pro ukončení hry
+  bool _hasGameOverBeenHandled =
+      false; // Příznak pro kontrolu, zda byl stav gameOver již zpracován
 
   QuizBoardComponent({
     required this.gameBloc,
@@ -27,10 +29,15 @@ class QuizBoardComponent extends FlameGame {
 
     final state = gameBloc.state;
 
-    // Když hra skončí, zavoláme callback
-    if (state.gameStatus == GameStatus.gameOver) {
-      onGameOver(); // Zavoláme callback
-    } else {
+    // Když hra skončí, zavoláme callback jen jednou
+    if (state.gameStatus == GameStatus.gameOver && !_hasGameOverBeenHandled) {
+      _hasGameOverBeenHandled =
+          true; // Zajistíme, že se stav zpracuje jen jednou
+      onGameOver();
+    } else if (state.gameStatus != GameStatus.gameOver) {
+      // Reset příznaku, pokud hra ještě není ukončena
+      _hasGameOverBeenHandled = false;
+
       if (state.currentQuestion != null) {
         displayCurrentQuestion(state);
       }
